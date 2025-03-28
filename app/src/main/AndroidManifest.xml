@@ -21,7 +21,7 @@
             android:name=".User.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".User.AdminHomeActivity"
+            android:name=".Admin.AdminHomeActivity"
             android:exported="false" />
         <activity
             android:name=".User.LoginActivity"
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".User.MainActivity"
             android:exported="false" />
         <activity
             android:name=".User.SignUpActivity"
