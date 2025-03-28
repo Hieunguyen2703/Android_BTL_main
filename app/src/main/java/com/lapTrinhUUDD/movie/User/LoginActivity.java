@@ -1,4 +1,4 @@
-package com.lapTrinhUUDD.movie.ui.login;
+package com.lapTrinhUUDD.movie.User;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -26,10 +26,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.lapTrinhUUDD.movie.R;
-import com.lapTrinhUUDD.movie.ui.admin_home.AdminHomeActivity;
-import com.lapTrinhUUDD.movie.ui.forgot_password.ForgotPasswordActivity;
-import com.lapTrinhUUDD.movie.ui.home.HomeActivity;
-import com.lapTrinhUUDD.movie.ui.signup.SignUpActivity;
 
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;

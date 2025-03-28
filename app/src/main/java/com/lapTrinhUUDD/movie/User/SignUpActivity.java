@@ -1,4 +1,4 @@
-package com.lapTrinhUUDD.movie.ui.signup;
+package com.lapTrinhUUDD.movie.User;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
@@ -29,7 +29,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.lapTrinhUUDD.movie.R;
 import com.lapTrinhUUDD.movie.Models.User;
-import com.lapTrinhUUDD.movie.ui.login.LoginActivity;
 
 import java.util.Calendar;
 

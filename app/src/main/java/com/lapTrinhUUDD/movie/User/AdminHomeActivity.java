@@ -1,4 +1,4 @@
-package com.lapTrinhUUDD.movie.ui.admin_home;
+package com.lapTrinhUUDD.movie.User;
 
 import android.os.Bundle;
 
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
 import com.lapTrinhUUDD.movie.R;
 
 public class AdminHomeActivity extends AppCompatActivity {

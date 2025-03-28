@@ -1,4 +1,4 @@
-package com.lapTrinhUUDD.movie.ui.forgot_password;
+package com.lapTrinhUUDD.movie.User;
 
 import android.os.Bundle;
 
