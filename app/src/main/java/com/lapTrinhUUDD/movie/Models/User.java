@@ -1,4 +1,4 @@
-package com.lapTrinhUUDD.movie.User;
+package com.lapTrinhUUDD.movie.Models;
 
 public class User {
     String username, email, dob ,gender, img;

@@ -28,7 +28,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.lapTrinhUUDD.movie.R;
-import com.lapTrinhUUDD.movie.User.User;
+import com.lapTrinhUUDD.movie.Models.User;
 import com.lapTrinhUUDD.movie.ui.login.LoginActivity;
 
 import java.util.Calendar;
