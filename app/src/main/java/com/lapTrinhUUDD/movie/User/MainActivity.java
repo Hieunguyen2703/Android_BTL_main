@@ -1,13 +1,14 @@
-package com.lapTrinhUUDD.movie;
+package com.lapTrinhUUDD.movie.User;
 
 import android.os.Bundle;
-import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.lapTrinhUUDD.movie.R;
 
 
 public class MainActivity extends AppCompatActivity {
