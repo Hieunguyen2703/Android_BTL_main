@@ -7,4 +7,11 @@
     <color name="colorAccent">#f1b814</color>
     <color name="text_light_blue">#031229</color>
     <color name="text_bg_blue">#1a242f</color>
+    <color name="background_dark">#3E2723</color> <!-- Màu nền tối -->
+    <color name="colorSecondary">#03DAC5</color>
+    <color name="teal_700">#00796B</color> <!-- Màu xanh đậm -->
+    <color name="purple_500">#9C27B0</color> <!-- Màu tím -->
+    <color name="textRed">#E50914</color>
+
+    <color name="gray_light">@color/material_grey_600</color>
 </resources>

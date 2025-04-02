@@ -6,11 +6,20 @@ espressoCore = "3.6.1"
 appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.3"
+gson = "2.10.1"
 firebase_database = "20.3.0"
 
+play-services-auth = "20.7.0"
+google-api-client = "1.32.1"
+google-http-client = "1.43.3"
+google-drive-api = "v3-rev136-1.25.0"
 constraintlayout = "2.2.1"
 googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.2.0"
+glide = "4.15.0"
+annotation = "1.9.1"
+lifecycleLivedataKtx = "2.8.7"
+lifecycleViewmodelKtx = "2.8.7"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -22,7 +31,16 @@ activity = { group = "androidx.activity", name = "activity", version.ref = "acti
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebase_database" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
-
+firebase-storage = {group = "com.google.firebase" ,name = "firebase-storage", version = "20.3.0"}
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "play-services-auth" }
+google-api-client = { module = "com.google.api-client:google-api-client-android", version.ref = "google-api-client" }
+google-drive-api = { module = "com.google.apis:google-api-services-drive", version.ref = "google-drive-api" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+google-http-client-gson = { group = "com.google.http-client", name = "google-http-client-gson", version.ref = "google-http-client" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
