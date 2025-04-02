@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Admin.UploadVideoActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Upload New Movie"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/edtMoviesName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter movie name"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/edtMoviesName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnUploadVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Video"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@android:color/white"
+        android:onClick="openvideoFiles"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/txtVideoSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No video selected"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintTop_toBottomOf="@id/btnUploadVideo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:onClick="clearVideo"/>
+
+    <EditText
+        android:id="@+id/edtMovieDescription"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:hint="Enter movie description"
+        android:background="@android:drawable/editbox_background"
+        android:textSize="16sp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtVideoSelected"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- RadioGroup for selecting whether the video is a slide -->
+    <TextView
+        android:id="@+id/tvVideoSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is this a slide video?"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/edtMovieDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvVideoSlide"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonSilde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silde"
+            android:checked="false"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonNoSlide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Slide"
+            android:checked="true"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAddVideo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Upload Movie"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:onClick="uploadFileToFirebase"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupSlide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
