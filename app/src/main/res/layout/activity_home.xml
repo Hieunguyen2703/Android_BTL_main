@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             app:tabGravity="center"
             app:tabIndicatorHeight="4dp"
-            android:background="@color/background_dark"
+            android:background="@drawable/gadient"
             app:tabBackground="@drawable/indicator_selector"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
