@@ -30,6 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.lapTrinhUUDD.movie.R;
 import com.lapTrinhUUDD.movie.Models.User;
 
+
 import java.util.Calendar;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -46,7 +47,7 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_signup);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

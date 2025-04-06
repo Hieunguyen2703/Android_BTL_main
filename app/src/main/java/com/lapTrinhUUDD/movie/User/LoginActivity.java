@@ -25,8 +25,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.lapTrinhUUDD.movie.Admin.AdminHomeActivity;
 import com.lapTrinhUUDD.movie.R;
+import com.lapTrinhUUDD.movie.Admin.AdminHomeActivity;
 
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;

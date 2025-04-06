@@ -68,5 +68,9 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation (libs.gson)
     implementation(libs.google.http.client.gson)
-
+}
+dependencies {
+    implementation("com.google.android.exoplayer:exoplayer-core:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-dash:2.19.1")
 }

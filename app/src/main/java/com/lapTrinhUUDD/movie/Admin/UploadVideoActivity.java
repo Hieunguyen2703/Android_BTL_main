@@ -85,7 +85,7 @@ public class UploadVideoActivity extends AppCompatActivity implements AdapterVie
 
         // Initialize RadioGroup and RadioButtons
         radioGroupType = findViewById(R.id.radioGroupSlide);
-        radioButtonSlide = findViewById(R.id.radioButtonSilde);
+        radioButtonSlide = findViewById(R.id.radioButtonSlide);
         radioButtonNoSlide = findViewById(R.id.radioButtonNoSlide);
 
         // Initialize Firebase
@@ -125,7 +125,7 @@ public class UploadVideoActivity extends AppCompatActivity implements AdapterVie
 
         // Set RadioGroup listener
         radioGroupType.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.radioButtonSilde) {
+            if (checkedId == R.id.radioButtonSlide) {
                 videoSlide = "Slide"; // If 'Slide' is selected
             } else {
                 videoSlide = "No Slide"; // If 'Normal' is selected

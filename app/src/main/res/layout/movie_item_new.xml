@@ -56,7 +56,7 @@
         app:srcCompat="@drawable/gradient_bg_item"
         android:background="@drawable/rounded"
         android:elevation="8dp"
-        />
+       />
 
     <TextView
         android:layout_width="wrap_content"

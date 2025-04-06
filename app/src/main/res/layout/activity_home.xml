@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gadient"
+    android:background="@color/colorPrimaryDark"
     tools:context=".User.HomeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,15 +19,15 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toEndOf="parent"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/indicator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="center"
-            app:tabIndicatorHeight="4dp"
-            android:background="@drawable/gadient"
+            app:tabIndicatorHeight="0dp"
+            android:background="@color/colorPrimaryDark"
             app:tabBackground="@drawable/indicator_selector"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:textAllCaps="true"
             app:layout_constraintTop_toBottomOf="@+id/Rv_movies"
-            android:text="Popular this Week"
+            android:text="Popular these week"
             android:textColor="@color/white"
             app:layout_constraintHorizontal_bias="0.0"/>
 
@@ -116,9 +116,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:tabMode="scrollable"
-                app:tabTextColor="@color/textRed"
-                android:background="@color/colorPrimary" />
+                android:background="@color/text_bg_blue"/>
+
         </androidx.cardview.widget.CardView>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tabrecycler"
@@ -133,5 +134,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/border_tabActionMovies"/>
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.core.widget.NestedScrollView>

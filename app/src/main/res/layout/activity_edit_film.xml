@@ -1,0 +1,88 @@
+<!-- activity_edit_video.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.EditFilmActivity">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/icon_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/tvEditVideoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Movie"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/etVideoName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Video Name"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditVideoTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_margin="8dp" />
+
+    <Spinner
+        android:id="@+id/etVideoCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Video Category"
+        app:layout_constraintTop_toBottomOf="@+id/etVideoName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_margin="8dp" />
+
+    <Spinner
+        android:id="@+id/etVideoType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Video Description"
+        app:layout_constraintTop_toBottomOf="@+id/etVideoCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_margin="8dp" />
+    <EditText
+        android:id="@+id/etVideoDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Video Description"
+        app:layout_constraintTop_toBottomOf="@+id/etVideoType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        app:layout_constraintTop_toBottomOf="@+id/etVideoDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:padding="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

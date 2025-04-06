@@ -17,6 +17,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Movie"
         tools:targetApi="31">
+
+        <activity
+            android:name=".User.ChangePasswordActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".User.UpdateProfileActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".User.ProfileImageActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".User.MovieDetailsActivity"
             android:exported="false" />
@@ -26,6 +39,8 @@
         <activity
             android:name=".User.SearchActivity"
             android:exported="false" />
+
+        <service android:name=".Service.FloatingWidgetService" />
 
         <activity
             android:name=".Admin.UploadThumbnailActivity"

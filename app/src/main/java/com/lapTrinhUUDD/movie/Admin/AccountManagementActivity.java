@@ -5,17 +5,16 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.lapTrinhUUDD.movie.Adapter.GetMovieForAdminHomeAdapter;
-import com.lapTrinhUUDD.movie.Models.GetVideoDetails;
+import com.lapTrinhUUDD.movie.Adapter.AccountAdapter;
+import com.lapTrinhUUDD.movie.Models.User;
 import com.lapTrinhUUDD.movie.R;
 import com.lapTrinhUUDD.movie.User.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,33 +27,33 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminHomeActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private GetMovieForAdminHomeAdapter videoAdapter;
-    private List<GetVideoDetails> videoList;
-    private DatabaseReference databaseVideos;
-    private Button btnAddVideo;
-    private ImageView btnLogout, btnAccount;
+public class AccountManagementActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerViewUsers;
+    private AccountAdapter userAdapter;
+    private List<User> userList;
+
+    private ImageView btnLogout, btnMovie;
     AlertDialog.Builder builder;
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_home);
+        setContentView(R.layout.activity_account_management);
 
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerViewUsers = findViewById(R.id.recyclerViewUsers);
+        recyclerViewUsers.setHasFixedSize(true);
+        recyclerViewUsers.setLayoutManager(new LinearLayoutManager(this));
 
-        videoList = new ArrayList<>();
-        videoAdapter = new GetMovieForAdminHomeAdapter(this, videoList);
-        recyclerView.setAdapter(videoAdapter);
+        userList = new ArrayList<>();
+        userAdapter = new AccountAdapter(this, userList);
+        recyclerViewUsers.setAdapter(userAdapter);
 
-        btnAccount = findViewById(R.id.btnAccount);
-        btnAccount.setOnClickListener(new View.OnClickListener() {
+        btnMovie = findViewById(R.id.btnMovie);
+        btnMovie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AdminHomeActivity.this, AccountManagementActivity.class);
+                Intent intent = new Intent(AccountManagementActivity.this, AdminHomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -72,7 +71,7 @@ public class AdminHomeActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 FirebaseAuth.getInstance().signOut();
-                                Intent intent = new Intent(AdminHomeActivity.this, LoginActivity.class);
+                                Intent intent = new Intent(AccountManagementActivity.this, LoginActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                                 finish();
@@ -88,30 +87,30 @@ public class AdminHomeActivity extends AppCompatActivity {
             }
         });
 
-        databaseVideos = FirebaseDatabase.getInstance().getReference("videos");
-
-        databaseVideos.addValueEventListener(new ValueEventListener() {
+        // Fetching data from Firebase
+        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("users");
+        dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                videoList.clear();
-                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    GetVideoDetails video = postSnapshot.getValue(GetVideoDetails.class);
-                    videoList.add(video);
+                userList.clear();
+                for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                    User user = userSnapshot.getValue(User.class);
+                    userList.add(user);
                 }
-                videoAdapter.notifyDataSetChanged();
+                userAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(AdminHomeActivity.this, "Failed to load videos: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                // Handle possible errors.
             }
         });
 
-        btnAddVideo = findViewById(R.id.btnAddVideo);
-        btnAddVideo.setOnClickListener(new View.OnClickListener() {
+        // Optional: Set a click listener on the title to go back to the previous screen
+        findViewById(R.id.tvTitle).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AdminHomeActivity.this, UploadVideoActivity.class));
+                finish(); // Go back to the previous screen
             }
         });
     }

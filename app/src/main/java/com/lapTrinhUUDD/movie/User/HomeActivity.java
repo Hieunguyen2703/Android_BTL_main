@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-            actionBar.setCustomView(R.layout.action_bar);
+            actionBar.setCustomView(R.layout.actionbar);
 
             btnSearch = findViewById(R.id.btn_search);
             btnInfo = findViewById(R.id.btn_info);

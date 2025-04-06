@@ -9,6 +9,7 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@drawable/background_image"
+    tools:context=".User.SignupActivity"
     android:gravity="center">
 
     <androidx.cardview.widget.CardView
