@@ -46,7 +46,6 @@ public class UploadThumbnailActivity extends AppCompatActivity {
                 }
             });
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -151,21 +150,7 @@ public class UploadThumbnailActivity extends AppCompatActivity {
     }
 
 
-    /*private void saveToThumbnails(String imageUrl, String movieType) {
-        Map<String, Object> data = new HashMap<>();
-        data.put("thumbnailUrl", imageUrl);
-        data.put("movieType", movieType);
 
-        databaseRef.child("thumbnails").child(videoId).setValue(data)
-                .addOnSuccessListener(aVoid -> {
-                    Snackbar.make(findViewById(R.id.main), "Thumbnail uploaded successfully!", Snackbar.LENGTH_LONG).show();
-                    clearImage(null);
-                    finish();
-                })
-                .addOnFailureListener(e -> {
-                    Snackbar.make(findViewById(R.id.main), "Failed to save thumbnail: " + e.getMessage(), Snackbar.LENGTH_LONG).show();
-                });
-    }*/
 
     public void clearImage(View view) {
         imageUri = null;
