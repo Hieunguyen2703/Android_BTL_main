@@ -145,9 +145,10 @@ public class UserProfileActivity extends AppCompatActivity {
                     dobTV.setText(dob);
                     genderTV.setText(gender);
 
-                    if(!(user.getImg().equals(""))){
+                    if (user.getImg() != null && !user.getImg().isEmpty()) {
                         Glide.with(UserProfileActivity.this).load(user.getImg()).into(accountImage);
                     }
+
 
                 }
                 progressDialog.dismiss();
