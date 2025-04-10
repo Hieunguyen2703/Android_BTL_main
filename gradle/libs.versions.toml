@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.2"
+guava = "33.3.1-android"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -8,7 +9,7 @@ material = "1.12.0"
 activity = "1.9.3"
 gson = "2.10.1"
 firebase_database = "20.3.0"
-
+generativeai = "0.9.0"
 play-services-auth = "20.7.0"
 google-api-client = "1.32.1"
 google-http-client = "1.43.3"
@@ -20,8 +21,11 @@ glide = "4.15.0"
 annotation = "1.9.1"
 lifecycleLivedataKtx = "2.8.7"
 lifecycleViewmodelKtx = "2.8.7"
+reactiveStreams = "1.0.4"
 
 [libraries]
+generativeai = { module = "com.google.ai.client.generativeai:generativeai", version.ref = "generativeai" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -41,6 +45,7 @@ glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "gl
 annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+reactive-streams = { module = "org.reactivestreams:reactive-streams", version.ref = "reactiveStreams" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }

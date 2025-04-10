@@ -52,7 +52,7 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
     private List<SliderSide> uploadsSlider;
     private TabLayout indicator, tabmoviesaction;
     private RecyclerView MoviesRv, moviesRvWeek, tab;
-    private ImageView btnSearch, btnInfo;
+    private ImageView btnSearch, btnInfo, btnChatAI;
     ProgressDialog progressDialog;
 
 
@@ -75,6 +75,7 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
 
             btnSearch = findViewById(R.id.btn_search);
             btnInfo = findViewById(R.id.btn_info);
+            btnChatAI = findViewById(R.id.btn_chat_ai);
 
             btnSearch.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -91,6 +92,8 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
                     startActivity(new Intent(HomeActivity.this, UserProfileActivity.class));
                 }
             });
+
+            btnChatAI.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, ChatAIActivity.class)));
 
         }
 

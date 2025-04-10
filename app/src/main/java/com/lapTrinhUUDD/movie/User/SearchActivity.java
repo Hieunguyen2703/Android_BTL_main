@@ -2,6 +2,9 @@ package com.lapTrinhUUDD.movie.User;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -27,7 +30,7 @@ public class SearchActivity extends AppCompatActivity implements MovieItemClickL
     private RecyclerView Movies;
     private MovieShowAdapter movieShowAdapter;
     private List<GetVideoDetails> movies;
-
+    private EditText searchEditText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,17 +42,35 @@ public class SearchActivity extends AppCompatActivity implements MovieItemClickL
             return insets;
         });
 
-        iniSearchBar();
+//        iniSearchBar();
+        searchEditText = findViewById(R.id.et_search);
         movies = (List<GetVideoDetails>) getIntent().getSerializableExtra("allMovies");
         iniMoviesList();
+        searchMovies();
     }
+
+    private void searchMovies() {
+        searchEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+                movieShowAdapter.getFilter().filter(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {}
+        });
+    }
+
 
     private void iniMoviesList(){
         Movies = findViewById(R.id.movies);
         movieShowAdapter = new MovieShowAdapter(this,movies,this);
         Movies.setAdapter(movieShowAdapter);
-        Movies.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3, GridLayoutManager.HORIZONTAL, false));
-        movieShowAdapter.notifyDataSetChanged();
+        Movies.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
+//        movieShowAdapter.notifyDataSetChanged();
     }
     private void iniSearchBar(){
         ActionBar actionBar = getSupportActionBar();

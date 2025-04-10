@@ -68,6 +68,10 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation (libs.gson)
     implementation(libs.google.http.client.gson)
+    implementation(libs.generativeai)
+    implementation(libs.reactive.streams)
+    implementation(libs.guava)
+
 }
 dependencies {
     implementation("com.google.android.exoplayer:exoplayer-core:2.19.1")
