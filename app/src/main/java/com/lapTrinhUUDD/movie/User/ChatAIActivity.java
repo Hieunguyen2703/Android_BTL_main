@@ -50,7 +50,7 @@ public class ChatAIActivity extends AppCompatActivity implements ChatCallback {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         EdgeToEdge.enable(this);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-        setContentView(R.layout.activity_chatvie_aiactivity);
+        setContentView(R.layout.activity_chat_ai);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.ll_chat), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
